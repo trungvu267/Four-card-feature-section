@@ -1,0 +1,84 @@
+
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Orange: hsl(34, 97%, 64%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Blue: hsl(212, 86%, 64%);
+    --Dark_Blue: hsl(234, 12%, 34%);
+    --Grayish_Blue: hsl(229, 6%, 66%);
+    --Light_Gray: hsl(0, 0%, 90%);
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 6%;
+    
+}
+header{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+h1.bold ,h2{
+    color: var(--Dark_Blue);
+}
+h1.thin{
+    font-weight: 200;
+    color: var(--Grayish_Blue);
+}
+p{
+    color: var(--Grayish_Blue);
+    font-size: 1rem;
+    word-spacing: 2px;
+    /* font-weight: 400; */
+}
+.container{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-template-areas: 
+    ". box2 ."
+    "box1 box2 box4"
+    "box1 box3 box4"
+    ". box3 .";
+}
+.card{
+    /* border: 1px solid black; */
+    box-shadow: 2px 5px 5px 5px var(--Light_Gray);
+    padding: 1rem;
+    border-radius: 10px;
+}
+.card img{
+    float: right;
+}
+.Supervisor{
+    grid-area: box1;
+    border-top: 5px solid var(--Cyan);
+}
+.Team_Builder{
+    grid-area: box2;
+    border-top: 5px solid var(--Red);
+}
+.Karma{
+    grid-area: box3;
+    border-top: 5px solid var(--Orange);
+}
+.Calculator{
+    grid-area: box4;
+    border-top: 5px solid var(--Blue);
+}
+
+@media screen and (max-width: 740px){
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+}
+
+footer{
+    margin-top: 2rem;
+}
